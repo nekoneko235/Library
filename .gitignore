@@ -4,5 +4,6 @@ CompetitiveProgramming.iml
 out/*
 # ignore main file
 src/Main.java
-
+# ignore MyScanner.java
+scr/others/MyScanner.java
 .idea/*
