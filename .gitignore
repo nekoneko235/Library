@@ -1,0 +1,7 @@
+CompetitiveProgramming.iml
+
+out/*
+
+.idea/*
+
+src/Main.java
