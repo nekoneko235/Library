@@ -1,4 +1,4 @@
-package lib.others;
+package others;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;

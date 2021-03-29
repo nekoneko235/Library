@@ -1,4 +1,4 @@
-package lib.others;
+package others;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -5,7 +5,7 @@
  *
  * Fundamental bit manipulation operations you must know Time Complexity: O(1)
  */
-package lib.others;
+package others;
 
 public class BitManipulations {
 

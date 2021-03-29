@@ -1,7 +1,8 @@
+# ignore iml file
 CompetitiveProgramming.iml
-
+# ignore class files
 out/*
+# ignore main file
+src/Main.java
 
 .idea/*
-
-src/Main.java

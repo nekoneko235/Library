@@ -1,4 +1,4 @@
-package lib.others;
+package others;
 
 import java.util.*;
 import java.util.stream.Collectors;

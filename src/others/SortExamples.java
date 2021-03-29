@@ -1,4 +1,4 @@
-package lib.others;
+package others;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -8,7 +8,8 @@ public class SortExamples {
 
     public static void main(String[] args) {
 
-        sortArrayList();
+        System.out.println("Sorting using TreeMap");
+        sortMapByKeyUsingTreeMap();
     }
 
     static void sortArray() {
@@ -201,6 +202,48 @@ public class SortExamples {
                 .collect(Collectors.toList());
 
         System.out.println(reverseSortedNames);
+    }
 
+    static void sortMapByValues() {
+        Map<String, Integer> unSortedMap = getUnSortedMap();
+
+        System.out.println("Unsorted Map: " + unSortedMap);
+
+        LinkedHashMap<String, Integer> sortedMap = new LinkedHashMap<>();
+        unSortedMap.entrySet().stream().sorted(Map.Entry.comparingByValue())
+                .forEachOrdered(x -> sortedMap.put(x.getKey(), x.getValue()));
+
+        System.out.println("Sorted Map : " + sortedMap);
+
+        LinkedHashMap<String, Integer> reverseSortedMap = new LinkedHashMap<>();
+        unSortedMap.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .forEachOrdered(x -> reverseSortedMap.put(x.getKey(), x.getValue()));
+
+        System.out.println("Reverse Sorted Map : " + reverseSortedMap);
+    }
+
+    static Map<String, Integer> getUnSortedMap() {
+        Map<String, Integer> unsortMap = new HashMap<>();
+        unsortMap.put("alex", 1);
+        unsortMap.put("davig", 2);
+        unsortMap.put("elle", 3);
+        unsortMap.put("charles", 4);
+        unsortMap.put("brian", 5);
+        return unsortMap;
+    }
+
+    static void sortMapByKeyUsingTreeMap() {
+        Map<String, Integer> unsortedMap = getUnSortedMap();
+
+        System.out.println("Unsorted Map : " + unsortedMap);
+
+        Map<String, Integer> sortedMap = new TreeMap<>(unsortedMap);
+
+        System.out.println("Sorted Map : " + sortedMap);
+
+        Map<String, Integer> reverseSortedMap = new TreeMap<>(Collections.reverseOrder());
+        reverseSortedMap.putAll(unsortedMap);
+
+        System.out.println("Reverse Sorted Map : " + reverseSortedMap);
     }
 }

@@ -1,4 +1,4 @@
-package lib.math;
+package math;
 
 import java.util.ArrayList;
 
@@ -78,10 +78,10 @@ public class PrimeFactorization {
         }
 
         // Factory method for creating a Typed Pair immutable instance
-        public static <U extends Comparable<U>, V extends Comparable<V>> lib.others.Pair<U, V> of(U a, V b)
+        public static <U extends Comparable<U>, V extends Comparable<V>> Pair<U, V> of(U a, V b)
         {
             // calls private constructor
-            return new lib.others.Pair<>(a, b);
+            return new Pair<>(a, b);
         }
     }
 

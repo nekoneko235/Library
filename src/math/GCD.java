@@ -7,7 +7,7 @@
  * Time Complexity ~O(log(a + b))
  */
 
-package lib.math;
+package math;
 
 public class GCD {
     // Computes the Greatest Common Divisor (GCD) of a & b

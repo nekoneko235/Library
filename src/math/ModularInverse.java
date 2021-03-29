@@ -6,7 +6,7 @@
  * Time Complexity ~O(log(a + b))
  */
 
-package lib.math;
+package math;
 
 public class ModularInverse {
 

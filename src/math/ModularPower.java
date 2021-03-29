@@ -2,7 +2,7 @@
  * Time Complexity ~O(log(n))
  */
 
-package lib.math;
+package math;
 
 public class ModularPower {
 

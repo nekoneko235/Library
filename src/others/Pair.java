@@ -1,4 +1,4 @@
-package lib.others;
+package others;
 
 // Pair class
 public class Pair<U extends Comparable<U>, V extends Comparable<V>>

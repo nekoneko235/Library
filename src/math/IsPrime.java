@@ -1,7 +1,7 @@
 // Tests whether a number is a prime number or not
 // Time Complexity: O(sqrt(n))
 
-package lib.math;
+package math;
 
 public class IsPrime {
 

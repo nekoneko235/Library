@@ -6,7 +6,7 @@
  * Time Complexity ~O(log(a + b))
  */
 
-package lib.math;
+package math;
 
 import java.util.Arrays;
 

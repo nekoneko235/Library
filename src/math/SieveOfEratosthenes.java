@@ -5,7 +5,7 @@
  *
  * Use the sieve of eratosthenes to find all the prime numbers up to a certain limit.
  */
-package lib.math;
+package math;
 
 public class SieveOfEratosthenes {
 
