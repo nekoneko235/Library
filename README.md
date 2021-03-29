@@ -1,2 +1,2 @@
 # Competitive Programming Snippets in Java
-Competitive Programming Snippets in Java, which can be used in programming contests.
+Competitive Programming Snippets in Java is a set of snippets, which can be used in programming contests.
