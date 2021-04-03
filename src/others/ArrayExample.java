@@ -6,7 +6,7 @@ public class ArrayExample {
 
     public static void main(String[] args) {
 
-        arrayToList();
+        arrayFill();
     }
 
     static void printArray() {
@@ -165,6 +165,29 @@ public class ArrayExample {
         List<String> namesList2 = Arrays.asList(namesArray);
 
         System.out.println(namesList2);
+    }
+
+    static void arrayFill() {
+        int[] arr = { 1, 2, 3, 4, 5 };
+
+        // to fill complete array with a particular value
+        Arrays.fill(arr, 10);
+        System.out.println(Arrays.toString(arr));
+
+        int[] arr2 = { 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+
+        // fill from index 1 to index 4
+        Arrays.fill(arr2, 1, 5, 10);
+        System.out.println(Arrays.toString(arr2));
+
+        // fill a multi-dimensional array with given value
+        int[][] arr3 = new int[3][3];
+        // fill each row with 10
+        for (int[] row : arr3) {
+            Arrays.fill(row, 10);
+        }
+
+        System.out.println(Arrays.deepToString(arr3));
     }
 }
 
