@@ -59,7 +59,7 @@ public class MulSparseTable {
     // Do a multiplication query on the interval [l, r] int O(logn).
     // cascading multiplication query
     private long queryMul(int l, int r) {
-        int mulVal = 1;
+        long mulVal = 1;
         for (int p = log2[r - l + 1]; l <= r; p = log2[r - l + 1]) {
             mulVal *= dp[p][l];
             l += (1 << p);

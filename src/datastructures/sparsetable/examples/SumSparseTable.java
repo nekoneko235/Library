@@ -59,7 +59,7 @@ public class SumSparseTable {
     // Do a sum query on the interval [l, r] in O(logn).
     // cascading sum query
     private long querySum(int l, int r) {
-        int sumVal = 0;
+        long sumVal = 0;
         for (int p = log2[r - l + 1]; l <= r; p = log2[r - l + 1]) {
             sumVal += dp[p][l];
             l += (1 << p);
