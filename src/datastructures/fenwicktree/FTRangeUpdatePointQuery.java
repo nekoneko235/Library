@@ -8,24 +8,26 @@ package datastructures.fenwicktree;
  * A Fenwick Tree implementation which supports range updates and sum point queries
  */
 
-public class FenwickTreeRangeUpdatePointQuery {
+public class FTRangeUpdatePointQuery {
 
     public static void main(String[] args) {
         // The values array must be one based
         long[] values = {0,+1,-2,+3,-4,+5,-6};
         //               ^ first element does not get used
 
-        FenwickTreeRangeUpdatePointQuery ft = new FenwickTreeRangeUpdatePointQuery(values);
+        FTRangeUpdatePointQuery ft = new FTRangeUpdatePointQuery(values);
 
         ft.updateRange(1, 4, 10); // Add +10 to interval [1, 4] in O(log(n))
         System.out.println(ft.get(1)); // 11
         System.out.println(ft.get(4)); // 6
         System.out.println(ft.get(5)); // 5
 
-        ft.updateRange(3, 6, -20); // Add -20 to interval [1, 4] in O(log(n))
+        ft.updateRange(3, 6, -20); // Add -20 to interval [3, 6] in O(log(n))
         System.out.println(ft.get(3)); // -7
         System.out.println(ft.get(4)); // -14
         System.out.println(ft.get(5)); // -15
+
+
     }
 
     // The size of the array holding the Fenwick tree values
@@ -41,7 +43,7 @@ public class FenwickTreeRangeUpdatePointQuery {
     // Construct a Fenwick tree with an initial set of values.
     // The 'values' array MUST BE ONE BASED meaning values[0]
     // does not get used, O(n) construction.
-    public FenwickTreeRangeUpdatePointQuery(long[] values) {
+    public FTRangeUpdatePointQuery(long[] values) {
 
         if (values == null) throw new IllegalArgumentException("Values array cannot be null!");
 
