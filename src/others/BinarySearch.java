@@ -28,15 +28,15 @@ public class BinarySearch {
 
     // Binary search template
     static int binarySearch(int key) {
-        int no = -1;
+        int ng = -1;
         int ok = arr.size();
 
         // We don't know which is bigger
-        while (Math.abs(ok - no) > 1) {
-            int mid = (ok + no) / 2;
+        while (Math.abs(ok - ng) > 1) {
+            int mid = (ok + ng) / 2;
 
             if (isOk(mid, key)) ok = mid;
-            else no = mid;
+            else ng = mid;
         }
         return ok;
     }
@@ -45,31 +45,28 @@ public class BinarySearch {
     // Check if the index meets the condition
     static boolean isOk(int index, int key) {
         //Lower bound
-        if (key <= arr.get(index)) return true;
+        if (arr.get(index) >= key) return true;
         else return false;
-
-        // Upper bound
-        // if (key < arr.get(index)) return true;
-        // else return false;
     }
 
     static List<Integer> arr;
 
     public static void main(String[] args) {
         arr = Arrays.asList(1, 2, 2, 4, 6, 6, 6, 7, 9, 10, 10);
-        System.out.println(arr);
+        System.out.println(arr.toString());
 
         int lowerBound = ~Collections.binarySearch(arr, 6,
                 new LowerBoundComparator<>());
         int upperBound = ~Collections.binarySearch(arr, 6,
                 new UpperBoundComparator<>());
 
-        System.out.println("Lower bound using Collections.binarySearch : " + lowerBound);
-        System.out.println("Upper bound using Collections.binarySearch : " + upperBound);
-        System.out.println("Number of the elements : " + (upperBound - lowerBound));
+        System.out.println("Lower bound using Collections.binarySearch : " +
+                lowerBound); // output: 4
+        System.out.println("Upper bound using Collections.binarySearch : " +
+                upperBound); // output: 7
+        System.out.println("Number of the elements : " +
+                (upperBound - lowerBound)); // output: 3
 
-        System.out.println("lower bound : " + binarySearch(2));
-        System.out.println("lower bound : " + binarySearch(4));
         System.out.println("lower bound : " + binarySearch(6));
     }
 }
