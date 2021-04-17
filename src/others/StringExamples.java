@@ -8,7 +8,7 @@ public class StringExamples {
 
     public static void main(String[] args) {
 
-        findDuplicateCharacters();
+        reverseString();
     }
 
     static void convertStringToInt() {
@@ -91,8 +91,9 @@ public class StringExamples {
         String blogName = "How To Do In Java";
 
         StringBuilder reverseString = new StringBuilder(blogName).reverse();
+        String revS = reverseString.toString();
 
-        System.out.println(reverseString);
+        System.out.println(revS);
     }
 
     static void findDuplicateCharacters() {

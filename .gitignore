@@ -7,3 +7,4 @@ src/Main.java
 # ignore MyScanner.java
 src/others/MyScanner.java
 .idea/*
+/src/atcoder/
