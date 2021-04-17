@@ -6,7 +6,17 @@ public class StringMethods {
 
     public static void main(String[] args) {
 
-        upperLower();
+       lastIndexOf();
+    }
+
+    static void indexOf() {
+        String s = "elte bme mit oxford elte";
+        System.out.println(s.indexOf("elte"));
+    }
+
+    static void lastIndexOf() {
+        String s = "elte bme mit oxford elte";
+        System.out.println(s.lastIndexOf("elte"));
     }
 
     static void concat() {
