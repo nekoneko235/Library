@@ -8,12 +8,12 @@ public class StringExamples {
 
     public static void main(String[] args) {
 
-        reverseString();
+        convertStringToInt();
     }
 
     static void convertStringToInt() {
         // Using Integer.parseInt() method
-        int intVal = Integer.parseInt("1001");
+        int intVal = Integer.parseInt("0110");
         System.out.println(intVal);
 
         // Using Integer.valueOf() method

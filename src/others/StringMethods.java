@@ -111,4 +111,34 @@ public class StringMethods {
         String lowercaseString = string2.toLowerCase();
         System.out.println(lowercaseString);
     }
+
+    static void stringBuilder() {
+        String str = "ELTE";
+
+        // convert string to stringBuilder
+        StringBuilder sb = new StringBuilder(str);
+
+        // convert stringBuilder to string
+        sb.toString();
+
+        // concatenation
+        // Not only string type, but int and char types allowed
+        sb.append("what you want to concat");
+
+        // insert at the certain position
+        // sb.insert(int index, "what you want to concat")
+
+        // delete substring
+        // it doesn't include the endIndex
+        // sb.delete(int beginIndex, int endIndex)
+
+        // change an character at the certain position
+        // sb.setCharAt(int index, char c)
+
+        // reverse string
+        // sb.reverse()
+
+        // replacement string
+        // sb.replace(int start, int end, "replace string")
+    }
 }
