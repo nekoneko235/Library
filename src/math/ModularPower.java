@@ -4,7 +4,11 @@
 
 package math;
 
+import java.math.BigInteger;
+
 public class ModularPower {
+
+    static long mod = 1000000007;
 
     public static long modPow(long a, long n, long mod) {
         long res = 1;
@@ -16,6 +20,12 @@ public class ModularPower {
             n >>= 1;
         }
         return res;
+    }
+
+    static long modpow(long N, long K) {
+        return BigInteger.valueOf(N).
+                modPow(BigInteger.valueOf(K), BigInteger.valueOf(mod))
+                .longValue();
     }
 
     public static void main(String[] args) {
