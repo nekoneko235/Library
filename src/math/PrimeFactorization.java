@@ -3,6 +3,28 @@ package math;
 import java.util.ArrayList;
 
 public class PrimeFactorization {
+    public static void main(String[] args) {
+        ArrayList<Pair> list = primeFactorization(8);
+        System.out.println(list);
+    }
+
+    public static ArrayList<Pair> primeFactorization(long N) {
+        ArrayList<Pair> res = new ArrayList<>();
+        for (long a = 2; a * a <= N; ++a) {
+            if (N % a != 0) continue;
+            long ex = 0; // exponents
+
+            while (N % a == 0) {
+                ++ex;
+                N /= a;
+            }
+
+            res.add(new Pair(a, ex));
+        }
+
+        if (N != 1) res.add(new Pair(N, 1));
+        return res;
+    }
 
     static class Pair<U extends Comparable<U>, V extends Comparable<V>>
             implements Comparable<Pair<U, V>>
@@ -85,26 +107,4 @@ public class PrimeFactorization {
         }
     }
 
-    public static ArrayList<Pair> primeFactorization(long N) {
-        ArrayList<Pair> res = new ArrayList<>();
-        for (long a = 2; a * a <= N; ++a) {
-            if (N % a != 0) continue;
-            long ex = 0; // exponents
-
-            while (N % a == 0) {
-                ++ex;
-                N /= a;
-            }
-
-            res.add(new Pair(a, ex));
-        }
-
-        if (N != 1) res.add(new Pair(N, 1));
-        return res;
-    }
-
-    public static void main(String[] args) {
-        ArrayList<Pair> list = primeFactorization(28);
-        System.out.println(list);
-    }
 }
