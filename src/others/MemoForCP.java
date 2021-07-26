@@ -82,9 +82,15 @@ public class MemoForCP {
     }
 
     /*
+    10進数表記の整数を２進数文字列に変換し、立っているフラグを数える
+     */
+    public static int count1(int n) {
+        return Integer.toBinaryString(n).replaceAll("0", "").length();
+    }
+
+    /*
     配列の中身が等価か比較
     Arrays.deepEquals(A, B)
-
      */
 
     /*
