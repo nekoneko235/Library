@@ -82,13 +82,6 @@ public class MemoForCP {
     }
 
     /*
-    10進数表記の整数を２進数文字列に変換し、立っているフラグを数える
-     */
-    public static int count1(int n) {
-        return Integer.toBinaryString(n).replaceAll("0", "").length();
-    }
-
-    /*
     配列の中身が等価か比較
     Arrays.deepEquals(A, B)
      */
@@ -214,5 +207,10 @@ public class MemoForCP {
     /*
     Long.MAX_VALUE = 9223372036854775807 (約 9*10^18)
     Integer.MAX_VALUE = 2147483647 (約 2*10^9)
+     */
+
+    /*
+    平方根の計算なので BigDecimalクラスを使うときは MathContext.DECIMAL128 を引数として使う
+    BigDecimal a = new BigDecimal(in.next()).sqrt(MathContext.DECIMAL128);
      */
 }
