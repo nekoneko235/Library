@@ -194,7 +194,7 @@ public class MemoForCP {
      */
 
     /*
-    Ai - Aj が X の倍数である <=> Aiを200で割った余りとAjを200で割った余りが一致する
+    Ai - Aj が X の倍数である <=> AiをXで割った余りとAjをXで割った余りが一致する
      */
 
     /*
@@ -213,4 +213,92 @@ public class MemoForCP {
     平方根の計算なので BigDecimalクラスを使うときは MathContext.DECIMAL128 を引数として使う
     BigDecimal a = new BigDecimal(in.next()).sqrt(MathContext.DECIMAL128);
      */
+
+    /*
+    ３点 A(0,0), B(x1,y1), C(x2,y2)が同一直線上にあるかは、ABとACの傾きが等しいかで判定できる
+    y1/x1 = y2/x2 で判定すると0除算が発生するため、両辺にx1x2を掛けて、x2y1 = x1y2で判定すると良い
+     */
 }
+
+/* start pair
+static class Pair<U extends Comparable<U>, V extends Comparable<V>>
+        implements Comparable<Pair<U, V>>
+{
+    private U first;   	// first field of a Pair
+    private V second;  	// second field of a Pair
+
+    // Constructs a new Pair with specified values
+    public Pair(U first, V second)
+    {
+        super();
+        this.first = first;
+        this.second = second;
+    }
+
+    // Getter and Setter
+    public U getFirst() {
+        return first;
+    }
+
+    public void setFirst(U first) {
+        this.first = first;
+    }
+
+    public V getSecond() {
+        return second;
+    }
+
+    public void setSecond(V second) {
+        this.second = second;
+    }
+
+    @Override
+    // sorting list of pair by first elem and then sort again by second elem
+    public int compareTo(Pair<U, V> o) {
+        int cmp = this.getFirst().compareTo(o.getFirst());
+        if (cmp == 0) {
+            cmp = this.getSecond().compareTo(o.getSecond());
+        }
+        return cmp;
+    }
+
+    @Override
+    // Checks specified object is "equal to" current object or not
+    public boolean equals(Object o)
+    {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        Pair<?, ?> pair = (Pair<?, ?>) o;
+
+        // call equals() method of the underlying objects
+        if (!first.equals(pair.first))
+            return false;
+        return second.equals(pair.second);
+    }
+
+    @Override
+    // Computes hash code for an object to support hash tables
+    public int hashCode()
+    {
+        // use hash codes of the underlying objects
+        return 31 * first.hashCode() + second.hashCode();
+    }
+
+    @Override
+    public String toString()
+    {
+        return "(" + first + ", " + second + ")";
+    }
+
+    // Factory method for creating a Typed Pair immutable instance
+    public static <U extends Comparable<U>, V extends Comparable<V>> Pair<U, V> of(U a, V b)
+    {
+        // calls private constructor
+        return new Pair<>(a, b);
+    }
+} // end pair
+ */
