@@ -7,7 +7,7 @@ package datastructures;
 
 import java.util.Scanner;
 
-public class RSQ2D {
+public class RangeQuerySum2D {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
