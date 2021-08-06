@@ -7,7 +7,7 @@ package datastructures;
 
 import java.util.Scanner;
 
-public class RangeQuerySum2D {
+public class RangeSumQuery2D {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
