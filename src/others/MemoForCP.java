@@ -253,7 +253,7 @@ static class Pair<U extends Comparable<U>, V extends Comparable<V>>
     }
 
     @Override
-    // sorting list of pair by first elem and then sort again by second elem
+    // sorting list of pair by first element then second element
     public int compareTo(Pair<U, V> o) {
         int cmp = this.getFirst().compareTo(o.getFirst());
         if (cmp == 0) {
