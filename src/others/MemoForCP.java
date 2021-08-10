@@ -13,6 +13,7 @@ public class MemoForCP {
         Integer.parseInt("10", 2); //指定した基数で表される文字列数値を１０進数数値に変換する
         Integer.toBinaryString(2); //数値を2進数の文字列にする
         Integer.toHexString(17); //数値を16進数の文字列にする
+        Integer.highestOneBit(7); // 4: 1の最上位ビットの x の 2^x を返す
     }
 
     /*
@@ -217,6 +218,10 @@ public class MemoForCP {
     /*
     ３点 A(0,0), B(x1,y1), C(x2,y2)が同一直線上にあるかは、ABとACの傾きが等しいかで判定できる
     y1/x1 = y2/x2 で判定すると0除算が発生するため、両辺にx1x2を掛けて、x2y1 = x1y2で判定すると良い
+     */
+
+    /*
+    A xor C = B <=> A xor B = C
      */
 }
 
