@@ -1,5 +1,9 @@
 package others;
 
+/*
+ * Time Complexity: O(log n)
+ */
+
 import java.util.*;
 
 public class BinarySearch {
