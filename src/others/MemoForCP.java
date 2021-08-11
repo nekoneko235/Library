@@ -223,6 +223,11 @@ public class MemoForCP {
     /*
     A xor C = B <=> A xor B = C
      */
+
+    /*
+    木の直径を求める問題で頂点数 25000の時、DFSで実装した場合スタックオーバーフローした
+    (https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/5/GRL_5_A)
+     */
 }
 
 /* start pair
