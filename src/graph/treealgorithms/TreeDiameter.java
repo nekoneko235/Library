@@ -17,9 +17,6 @@ public class TreeDiameter {
     // sure you label the tree nodes in the range [0, MAX_NUM_NODES)
     static int MAX_NUM_NODES = 10;
 
-    // static Integer VISITED_TOKEN = 0;
-    // static int[] visited = new int[MAX_NUM_NODES];
-
     // Do a DFS and return a tuple (#nodes seen, index) to/of furthest node
     private static int[] dfs(List<List<Integer>> graph, int at, int parent) {
         int bestDist = 0, index = at;
