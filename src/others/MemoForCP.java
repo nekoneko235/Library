@@ -256,6 +256,15 @@ public class MemoForCP {
      */
 }
 
+/*
+グリッド上で８方向に移動可能
+static int[] dx = {0, 1, 1, 1, 0, -1, -1, -1};
+static int[] dy = {1, 1, 0, -1, -1, -1, 0, 1};
+グリッド上で４方向に移動可能
+static int[] dx = {0, 1, 0, -1};
+static int[] dy = {1, 0, -1, 0};
+*/
+
 /* start pair
 static class Pair<U extends Comparable<U>, V extends Comparable<V>>
         implements Comparable<Pair<U, V>>
@@ -337,4 +346,4 @@ static class Pair<U extends Comparable<U>, V extends Comparable<V>>
         return new Pair<>(a, b);
     }
 } // end pair
- */
+*/
